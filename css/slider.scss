@@ -1,0 +1,248 @@
+
+
+// Variables
+
+$dark-a: #13171f;
+$dark-b: #1b232c;
+
+$neon-a: #2dc8dc;
+$neon-b: #5af3f5;
+$neon-c: #2e6b80;
+
+
+// Slider
+
+.slider-home {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	background: $dark-a;
+	background: radial-gradient(ellipse at center, $dark-b 0%, $dark-a 65%, $dark-a 100%);
+}
+
+.sh_cont {
+	width: 100%;
+	height: 100%;
+}
+
+.sh_slide {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		position: absolute;
+		width: 50%;
+		max-width: 600px;
+		z-index: 1;
+		
+		animation: backfront-move 9.25s infinite;
+	}
+
+	h1 {
+		position: absolute;
+  		letter-spacing: -0.02em;
+		font-size: 170px;
+		color: #52eaed;
+		font-weight: 600;
+		text-align: center;
+		z-index: 2;
+		
+		animation: backfront-h1-move 9.25s infinite;
+	}
+
+	h2 {
+		position: absolute;
+
+		margin-top: 100px;
+		
+		font-weight: 400;
+		color: #FFF;
+		
+		z-index: 3;
+	}
+
+	a {
+		position: absolute;
+
+		margin-top: 140px;
+		
+		font-weight: 400;
+		color: #FFF;
+		background-color: transparent;
+		padding: 20px 40px;
+		border: 1px solid $neon-a;
+		border-radius: 20px;
+		z-index: 4;
+
+		&:hover {
+			background: $neon-a;
+		}
+	}
+
+}
+
+.sh_slide-fixed {
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		position: absolute;
+		height: 80%;
+		width: auto;
+		max-height: 1000px;
+
+		animation: const-move 9.25s infinite;
+	}
+
+}
+
+
+// Sections
+
+.header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 160px;
+
+	box-sizing: border-box;
+	padding: 0 60px;
+
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+
+	cursor: default;
+
+	z-index: 5;
+
+	h1 {
+  		letter-spacing: 0em;
+		font-size: 28px;
+		color: #2A6275;
+		font-weight: 600;
+	}
+
+	hr {
+		position: absolute;
+		width: 28px;
+		height: 2px;
+
+		background-color: #52EAED;
+
+		margin-top: 30px;
+	}
+
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 80px;
+	overflow: hidden;
+
+	box-sizing: border-box;
+	padding: 0 60px;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	z-index: 5;
+
+	img {
+		height: 14px;
+		width: auto;
+
+		padding-right: 8px;
+		margin-bottom: -3px;
+	}
+
+	p, a {
+		color: #9ba3af;
+		font-weight: 400;
+	}
+
+	p {
+		margin-right: 10px;
+	}
+
+}
+
+
+
+
+// Animations CSS
+
+@keyframes const-move {
+	0% {
+		margin-left: -10px;
+		transform : rotate(0deg) scale(1);
+	}
+	33% {
+		margin-left: 0px;
+		transform : rotate(6deg) scale(1.05);
+	}
+	66% {
+		margin-left: 10px;
+		transform : rotate(-10deg) scale(0.95);
+	}
+	100% {
+		margin-left: -10px;
+		transform : rotate(0deg) scale(1);
+	}
+}
+
+@keyframes giro-move {
+	0% {
+		transform : rotate(0deg);
+	}
+	100% {
+		transform : rotate(360deg);
+	}
+}
+
+@keyframes backfront-move {
+	0% {
+		transform: scale(.8, .8);
+	}
+	20% {
+		transform: scale(1, 1);
+	}
+	80% {
+		transform: scale(1.05, 1.05);
+	}
+	100% {
+		transform: scale(1.2, 1.2);
+	}
+}
+
+@keyframes backfront-h1-move {
+	0% {
+		transform: scale(.9, .9);
+	}
+	20% {
+		transform: scale(1, 1);
+	}
+	80% {
+		transform: scale(1.04, 1.04);
+	}
+	100% {
+		transform: scale(1.1, 1.1);
+	}
+}
