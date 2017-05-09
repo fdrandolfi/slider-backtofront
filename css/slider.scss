@@ -42,7 +42,7 @@ $neon-c: #2e6b80;
 		max-width: 600px;
 		z-index: 1;
 		
-		animation: backfront-move 9.25s infinite;
+		animation: backfront-move 7s infinite;
 	}
 
 	h1 {
@@ -54,30 +54,28 @@ $neon-c: #2e6b80;
 		text-align: center;
 		z-index: 2;
 		
-		animation: backfront-h1-move 9.25s infinite;
+		animation: backfront-h1-move 7s infinite;
 	}
 
 	h2 {
 		position: absolute;
 		font-size: 16px;
-		margin-top: 90px;
+		margin-top: 95px;
 		color: #FFF;
 		font-weight: 400;
-		z-index: 3;
+		z-index: 2;
 	}
 
 	a {
 		position: absolute;
-
 		margin-top: 140px;
-		
 		font-weight: 400;
 		color: #FFF;
 		background-color: transparent;
 		padding: 20px 40px;
 		border: 1px solid $neon-a;
 		border-radius: 20px;
-		z-index: 4;
+		z-index: 3;
 
 		&:hover {
 			background: $neon-a;
@@ -102,86 +100,10 @@ $neon-c: #2e6b80;
 		width: auto;
 		max-height: 1000px;
 
-		animation: const-move 9.25s infinite;
+		animation: const-move 8s infinite;
 	}
 
 }
-
-
-// Sections
-
-.header {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 160px;
-
-	box-sizing: border-box;
-	padding: 0 60px;
-
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	flex-direction: column;
-
-	cursor: default;
-
-	z-index: 5;
-
-	h1 {
-  		letter-spacing: 0em;
-		font-size: 28px;
-		color: #2A6275;
-		font-weight: 600;
-	}
-
-	hr {
-		position: absolute;
-		width: 28px;
-		height: 2px;
-
-		background-color: #52EAED;
-
-		margin-top: 30px;
-	}
-
-}
-
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 80px;
-	overflow: hidden;
-
-	box-sizing: border-box;
-	padding: 0 60px;
-
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-
-	z-index: 5;
-
-	img {
-		height: 14px;
-		width: auto;
-
-		padding-right: 8px;
-		margin-bottom: -3px;
-	}
-
-	p, a {
-		color: #9ba3af;
-		font-weight: 400;
-	}
-
-	p {
-		margin-right: 10px;
-	}
-
-}
-
 
 
 
@@ -206,15 +128,6 @@ $neon-c: #2e6b80;
 	}
 }
 
-@keyframes giro-move {
-	0% {
-		transform : rotate(0deg);
-	}
-	100% {
-		transform : rotate(360deg);
-	}
-}
-
 @keyframes backfront-move {
 	0% {
 		transform: scale(.8, .8);
@@ -223,7 +136,7 @@ $neon-c: #2e6b80;
 		transform: scale(1, 1);
 	}
 	80% {
-		transform: scale(1.05, 1.05);
+		transform: scale(.9, .9);
 	}
 	100% {
 		transform: scale(1.2, 1.2);
@@ -238,9 +151,9 @@ $neon-c: #2e6b80;
 		transform: scale(1, 1);
 	}
 	80% {
-		transform: scale(1.04, 1.04);
+		transform: scale(1.05, 1.05);
 	}
 	100% {
-		transform: scale(1.1, 1.1);
+		transform: scale(1.2, 1.2);
 	}
 }
