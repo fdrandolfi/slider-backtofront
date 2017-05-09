@@ -81,7 +81,14 @@ $neon-c: #2e6b80;
 			background: $neon-a;
 		}
 	}
+}
 
+#h1-w {
+	color: #FFFFFF;
+}
+
+#h2-n {
+	color: $neon-a;
 }
 
 .sh_slide-fixed {
@@ -102,7 +109,6 @@ $neon-c: #2e6b80;
 
 		animation: const-move 8s infinite;
 	}
-
 }
 
 
@@ -154,6 +160,6 @@ $neon-c: #2e6b80;
 		transform: scale(1.05, 1.05);
 	}
 	100% {
-		transform: scale(1.2, 1.2);
+		transform: scale(1.1, 1.1);
 	}
 }
