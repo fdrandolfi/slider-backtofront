@@ -29,7 +29,7 @@
   width: 50%;
   max-width: 600px;
   z-index: 1;
-  animation: backfront-move 7s;
+  animation: backfront-move 7s forwards;
 }
 
 .sh_slide h1 {
@@ -40,7 +40,7 @@
   font-weight: 600;
   text-align: center;
   z-index: 2;
-  animation: backfront-h1-move 7s;
+  animation: backfront-h1-move 7s forwards;
 }
 
 .sh_slide h2 {
